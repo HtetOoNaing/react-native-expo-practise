@@ -3,6 +3,7 @@ import { Button, Modal, StyleSheet, TextInput, View } from 'react-native'
 
 const GoalInput = ({ visible, addGoalHandler, cancelHandler }) => {
 	const [enteredGoal, setEnteredGoal] = useState('')
+
 	const goalInputHandler = (enteredText) => {
 		setEnteredGoal(enteredText);
 	}
@@ -13,6 +14,7 @@ const GoalInput = ({ visible, addGoalHandler, cancelHandler }) => {
 		addGoalHandler(enteredGoal)
 		setEnteredGoal('')
 	}
+	
 	return (
 		<Modal visible={visible} animationType="slide">
 			<View style={styles.inputContainer}>
