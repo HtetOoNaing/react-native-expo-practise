@@ -7,6 +7,9 @@ const GoalInput = ({ visible, addGoalHandler, cancelHandler }) => {
 		setEnteredGoal(enteredText);
 	}
 	const onAddGoal = () => {
+		if(enteredGoal.length === 0) {
+			return
+		}
 		addGoalHandler(enteredGoal)
 		setEnteredGoal('')
 	}
